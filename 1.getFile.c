@@ -1,4 +1,4 @@
-#include "monty_hf.h"
+#include "monty.h"
 
 /**
  * getFile - get cmd argument that is supposed to be

@@ -1,4 +1,4 @@
-#include "monty_hf.h"
+#include "monty.h"
 
 /**
  * pushToStack - pushes an element to the top of the stack
