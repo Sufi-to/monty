@@ -3,7 +3,7 @@
 /**
  * getFile - get cmd argument that is supposed to be
  * a monty file and handles it
- * @stack_ptr: pointer to the stack
+ * @stack: pointer to the stack
  * @fd: name of the file
  * @insts: instruction to be carried out
  * Return: None
@@ -25,7 +25,7 @@ void getFile(stack_t **stack, const char *fd, instruction_t insts[])
 
 /**
  * exec_instr - execute the functions
- * @stack_ptr: pointer to the stack
+ * @stack: pointer to the stack
  * @insts: function to execute
  * @montyF: name of file
  * Return: none
