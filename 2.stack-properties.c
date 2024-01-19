@@ -45,6 +45,7 @@ void printStack(stack_t **stack, unsigned int line_number)
 {
 	stack_t *ptr;
 	(void)line_number;
+	
 	ptr = *stack;
 	while (ptr != NULL)
 	{
