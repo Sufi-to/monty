@@ -19,7 +19,7 @@ void getFile(stack_t **stack_ptr, const char *fd, instruction_t insts[])
 		exit(EXIT_FAILURE);
 	}
 
-	execInst(stack_ptr, montyF, insts);
+	exec_instr(stack_ptr, montyF, insts);
 	fclose(montyF);
 }
 
