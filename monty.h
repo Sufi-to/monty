@@ -41,13 +41,13 @@ typedef struct instruction_s
 void freestackptr(stack_t *h);
 void getFile(stack_t **stack_ptr, const char *fd, instruction_t inst[]);
 void exec_instr(stack_t **stack_ptr, FILE *montyF, instruction_t insts[]);
-void pushToStack(stack_t **stack, unsigned int lnNum);
-void printStack(stack_t **stack, unsigned int lnNum);
-void printTop(stack_t **stack, unsigned int lnNum);
-void removeTop(stack_t **stack, unsigned int lnNum);
-void swapTopTwo(stack_t **stack, unsigned int lnNum);
-void doNothing(stack_t **stack, unsigned int lnNum);
-void addTopTwo(stack_t **stack, unsigned int lnNum);
+void pushToStack(stack_t **stack, unsigned int line_number);
+void printStack(stack_t **stack, unsigned int line_number);
+void printTop(stack_t **stack, unsigned int line_number);
+void removeTop(stack_t **stack, unsigned int line_number);
+void swapTopTwo(stack_t **stack, unsigned int line_number);
+void doNothing(stack_t **stack, unsigned int line_number);
+void addTopTwo(stack_t **stack, unsigned int line_number);
 
 #endif
 

@@ -34,13 +34,13 @@ void exec_instr(stack_t **stack_ptr, FILE *montyF, instruction_t insts[])
 {
 	char read_montyF[BUFSIZ];
 	char *opcode;
-	unsigned int lnNum;
+	unsigned int line_number;
 	int i;
 
-	lnNum = 0;
+	line_number = 0;
 	while (fgets(read_montyF, sizeof(read_montyF), montyF) != NULL)
 	{
-		lnNum++;
+		line_number++;
 		opcode = strtok(read_montyF, " \n");
 		if (opcode != NULL)
 		{
@@ -49,7 +49,7 @@ void exec_instr(stack_t **stack_ptr, FILE *montyF, instruction_t insts[])
 			{
 				if (strcmp(opcode, insts[i].opcode) == 0)
 				{
-					insts[i].f(stack_ptr, lnNum);
+					insts[i].f(stack_ptr, line_number);
 					break;
 				}
 				i++;

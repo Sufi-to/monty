@@ -2,16 +2,16 @@
 /**
  * addTopTwo - add the top two elements
  * @stack: pointer to the stack
- * @lnNum: number of line
+ * @line_number: number of line
  * Return: None
 */
-void addTopTwo(stack_t **stack, unsigned int lnNum)
+void addTopTwo(stack_t **stack, unsigned int line_number)
 {
 	stack_t *ptr;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
-		fprintf(stderr, "L%d: can't add, stack too short\n", lnNum);
+		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	(*stack)->next->n += (*stack)->n;

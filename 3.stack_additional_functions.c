@@ -1,18 +1,18 @@
 #include "monty.h"
 /**
  * swapTopTwo - swaps the top two elements in the stack
- * @lnNum: number of the line
+ * @line_number: number of the line
  * @stack: pointer to the stack
  * Return: None
 */
-void swapTopTwo(stack_t **stack, unsigned int lnNum)
+void swapTopTwo(stack_t **stack, unsigned int line_number)
 {
 	stack_t *ptr;
 
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
-		fprintf(stderr, "L%d: can't swap, stack too short\n", lnNum);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	ptr = (*stack)->next;
@@ -29,13 +29,13 @@ void swapTopTwo(stack_t **stack, unsigned int lnNum)
 /**
  * doNothing - function that just exists to be a pain in the ...
  * @stack: pointer to stack
- * @lnNum: line number
+ * @line_number: line number
  * Return: None
 */
-void doNothing(stack_t **stack, unsigned int lnNum)
+void doNothing(stack_t **stack, unsigned int line_number)
 {
 	(void)stack;
-	(void)lnNum;
+	(void)line_number;
 }
 
 /**

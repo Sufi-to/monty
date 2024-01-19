@@ -2,11 +2,11 @@
 
 /**
  * pushToStack - pushes an element to the top of the stack
- * @lnNum: number of the line
+ * @line_number: number of the line
  * @stack: pointer to the stack
  * Return: None
 */
-void pushToStack(stack_t **stack, unsigned int lnNum)
+void pushToStack(stack_t **stack, unsigned int line_number)
 {
 	char *cs;
 	stack_t *new;
@@ -15,7 +15,7 @@ void pushToStack(stack_t **stack, unsigned int lnNum)
 	cs = strtok(NULL, " \n");
 	if ((cs == NULL || !isdigit(*cs)) && ((*cs != '-' && !isdigit(*(cs + 1)))))
 	{
-		fprintf(stderr, "L%d: usage: push integer\n", lnNum);
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	x = atoi(cs);
@@ -37,14 +37,14 @@ void pushToStack(stack_t **stack, unsigned int lnNum)
 
 /**
  * printStack - prints the whole stack
- * @lnNum: number of line
+ * @line_number: number of line
  * @stack: pointer to stack
  * Return: None
 */
-void printStack(stack_t **stack, unsigned int lnNum)
+void printStack(stack_t **stack, unsigned int line_number)
 {
 	stack_t *ptr;
-	(void)lnNum;
+	(void)line_number;
 	ptr = *stack;
 	while (ptr != NULL)
 	{
@@ -55,15 +55,15 @@ void printStack(stack_t **stack, unsigned int lnNum)
 
 /**
  * printTop - prints the top element
- * @lnNum: number of line
+ * @line_number: number of line
  * @stack: pointer to stack
  * Return: None
 */
-void printTop(stack_t **stack, unsigned int lnNum)
+void printTop(stack_t **stack, unsigned int line_number)
 {
 	if (*stack == NULL)
 	{
-		fprintf(stderr, "L%d: can't pint, stack empty\n", lnNum);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", (*stack)->n);
@@ -71,17 +71,17 @@ void printTop(stack_t **stack, unsigned int lnNum)
 
 /**
  * removeTop - removes the top element
- * @lnNum: number of line
+ * @line_number: number of line
  * @stack: pointer to stack
  * Return: None
 */
-void removeTop(stack_t **stack, unsigned int lnNum)
+void removeTop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *ptr;
 
 	if (*stack == NULL)
 	{
-		fprintf(stderr, "L%d: can't pop an empty stack\n", lnNum);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	ptr = *stack;
