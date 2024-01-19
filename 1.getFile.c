@@ -8,7 +8,7 @@
  * @insts: instruction to be carried out
  * Return: None
 */
-void getFile(stack_t **stack_ptr, const char *fd, instruction_t insts[])
+void getFile(stack_t **stack, const char *fd, instruction_t insts[])
 {
 	FILE *montyF;
 
@@ -19,7 +19,7 @@ void getFile(stack_t **stack_ptr, const char *fd, instruction_t insts[])
 		exit(EXIT_FAILURE);
 	}
 
-	exec_instr(stack_ptr, montyF, insts);
+	exec_instr(stack, montyF, insts);
 	fclose(montyF);
 }
 
@@ -30,7 +30,7 @@ void getFile(stack_t **stack_ptr, const char *fd, instruction_t insts[])
  * @montyF: name of file
  * Return: none
 */
-void exec_instr(stack_t **stack_ptr, FILE *montyF, instruction_t insts[])
+void exec_instr(stack_t **stack, FILE *montyF, instruction_t insts[])
 {
 	char read_montyF[BUFSIZ];
 	char *opcode;
@@ -49,7 +49,7 @@ void exec_instr(stack_t **stack_ptr, FILE *montyF, instruction_t insts[])
 			{
 				if (strcmp(opcode, insts[i].opcode) == 0)
 				{
-					insts[i].f(stack_ptr, line_number);
+					insts[i].f(stack, line_number);
 					break;
 				}
 				i++;

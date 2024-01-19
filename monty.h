@@ -39,8 +39,8 @@ typedef struct instruction_s
 } instruction_t;
 
 void freestackptr(stack_t *h);
-void getFile(stack_t **stack_ptr, const char *fd, instruction_t insts[]);
-void exec_instr(stack_t **stack_ptr, FILE *montyF, instruction_t insts[]);
+void getFile(stack_t **stack, const char *fd, instruction_t insts[]);
+void exec_instr(stack_t **stack, FILE *montyF, instruction_t insts[]);
 void pushToStack(stack_t **stack, unsigned int line_number);
 void printStack(stack_t **stack, unsigned int line_number);
 void printTop(stack_t **stack, unsigned int line_number);

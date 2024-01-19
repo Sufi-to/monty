@@ -11,7 +11,7 @@
 
 int main(int ac, char *av[])
 {
-	stack_t *stack_ptr;
+	stack_t *stack;
 	instruction_t insts[] = {
 		{"push", pushToStack},
 		{"pall", printStack},
@@ -22,14 +22,14 @@ int main(int ac, char *av[])
 		{"nop", doNothing},
 		{NULL, NULL}
 	};
-	stack_ptr = NULL;
+	stack = NULL;
 	if (ac != 2)
 	{
 		fprintf(stderr, "Usage: %s filename\n", av[0]);
 		exit(EXIT_FAILURE);
 	}
 
-	getFile(&stack_ptr, av[1], insts);
-	freeStackptr(stack_ptr);
+	getFile(&stack, av[1], insts);
+	freeStackptr(stack);
 	return (0);
 }
