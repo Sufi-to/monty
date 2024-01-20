@@ -19,5 +19,5 @@ void printchrTop(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	printf("%c\n", (char)(*stack)->n);
+	printf("%c\n", (*stack)->n);
 }
