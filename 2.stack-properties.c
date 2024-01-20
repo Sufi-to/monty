@@ -13,7 +13,8 @@ void pushToStack(stack_t **stack, unsigned int line_number)
 	int x;
 
 	cs = strtok(NULL, " \n");
-	if ((cs == NULL || !isdigit(*cs)) && ((*cs != '-' && !isdigit(*(cs + 1)))))
+	if ((cs == NULL) || (!isdigit(*cs) && (*cs != '-')) || ((*cs == '-') &&
+	!isdigit(*(cs + 1))))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
