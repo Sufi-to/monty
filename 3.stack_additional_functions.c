@@ -39,11 +39,11 @@ void doNothing(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * freestackptr - frees the allocated memory for element
+ * freeStackptr - frees the allocated memory for element
  * @h: pointer to stack element
  * Return: None
 */
-void freestackptr(stack_t *h)
+void freeStackptr(stack_t *h)
 {
 	stack_t *cn;
 

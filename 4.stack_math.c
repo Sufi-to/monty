@@ -9,6 +9,8 @@ void addTopTwo(stack_t **stack, unsigned int line_number)
 {
 	stack_t *ptr;
 
+	ptr = NULL;
+
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
@@ -17,6 +19,7 @@ void addTopTwo(stack_t **stack, unsigned int line_number)
 	(*stack)->next->n += (*stack)->n;
 	ptr = *stack;
 	*stack = (*stack)->next;
+	free(ptr);
 
 	if (stack != NULL)
 		(*stack)->prev = NULL;

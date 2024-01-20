@@ -38,7 +38,7 @@ typedef struct instruction_s
 		void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void freestackptr(stack_t *h);
+void freeStackptr(stack_t *h);
 void getFile(stack_t **stack, const char *fd, instruction_t insts[]);
 void exec_instr(stack_t **stack, FILE *montyF, instruction_t insts[]);
 void pushToStack(stack_t **stack, unsigned int line_number);
