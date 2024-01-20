@@ -52,6 +52,10 @@ void exec_instr(stack_t **stack, FILE *montyF, instruction_t insts[])
 					insts[i].f(stack, line_number);
 					break;
 				}
+				else if (strcmp("#", opcode) == 0)
+				{
+					doNothing(stack, line_number);
+				}
 				i++;
 			}
 			if (insts[i].opcode == NULL)
