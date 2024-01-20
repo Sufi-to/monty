@@ -30,7 +30,7 @@ int main(int ac, char *av[])
 	stack = NULL;
 	if (ac != 2)
 	{
-		fprintf(stderr, "Usage: %s filename\n", av[0]);
+		fprintf(stderr, "Usage: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 
