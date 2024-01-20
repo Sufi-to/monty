@@ -55,10 +55,10 @@ void exec_instr(stack_t **stack, FILE *montyF, instruction_t insts[])
 				i++;
 			}
 			if (insts[i].opcode == NULL)
-            {
-                fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
-                exit(EXIT_FAILURE);
-            }
+			{
+				fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
+				exit(EXIT_FAILURE);
+			}
 		}
 	}
 }
