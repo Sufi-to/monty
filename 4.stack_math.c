@@ -134,7 +134,7 @@ void modTopTwo(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%d: division by zero\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	(*stack)->next->n /= (*stack)->n;
+	(*stack)->next->n %= (*stack)->n;
 	ptr = *stack;
 	*stack = (*stack)->next;
 	free(ptr);
