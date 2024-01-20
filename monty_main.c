@@ -20,6 +20,9 @@ int main(int ac, char *av[])
 		{"swap", swapTopTwo},
 		{"add", addTopTwo},
 		{"nop", doNothing},
+		{"mul", mulTopTwo},
+		{"sub", subTopTwo},
+		{"div", divTopTwo},
 		{NULL, NULL}
 	};
 	stack = NULL;

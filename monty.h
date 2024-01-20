@@ -48,6 +48,10 @@ void removeTop(stack_t **stack, unsigned int line_number);
 void swapTopTwo(stack_t **stack, unsigned int line_number);
 void doNothing(stack_t **stack, unsigned int line_number);
 void addTopTwo(stack_t **stack, unsigned int line_number);
+void mulTopTwo(stack_t **stack, unsigned int line_number);
+void subTopTwo(stack_t **stack, unsigned int line_number);
+void divTopTwo(stack_t **stack, unsigned int line_number);
+
 
 #endif
 
