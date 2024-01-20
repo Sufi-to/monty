@@ -23,6 +23,7 @@ int main(int ac, char *av[])
 		{"mul", mulTopTwo},
 		{"sub", subTopTwo},
 		{"div", divTopTwo},
+		{"mod", modTopTwo},
 		{NULL, NULL}
 	};
 	stack = NULL;

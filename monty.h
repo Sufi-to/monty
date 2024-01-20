@@ -51,6 +51,7 @@ void addTopTwo(stack_t **stack, unsigned int line_number);
 void mulTopTwo(stack_t **stack, unsigned int line_number);
 void subTopTwo(stack_t **stack, unsigned int line_number);
 void divTopTwo(stack_t **stack, unsigned int line_number);
+void modTopTwo(stack_t **stack, unsigned int line_number);
 
 
 #endif
