@@ -1,11 +1,10 @@
 #ifndef MONTY_H
 #define MONTY_H
 
-
+#include <ctype.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
-#include <ctype.h>
 #include <string.h>
 
 /**
@@ -52,7 +51,6 @@ void mulTopTwo(stack_t **stack, unsigned int line_number);
 void subTopTwo(stack_t **stack, unsigned int line_number);
 void divTopTwo(stack_t **stack, unsigned int line_number);
 void modTopTwo(stack_t **stack, unsigned int line_number);
-
-
+void printchrTop(stack_t **stack, unsigned int line_number);
 #endif
 
