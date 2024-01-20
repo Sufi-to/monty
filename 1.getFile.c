@@ -54,7 +54,8 @@ void exec_instr(stack_t **stack, FILE *montyF, instruction_t insts[])
 				}
 				else if (strcmp("#", opcode) == 0)
 				{
-					doNothing(&stack, line_number);
+					i++;
+					continue;
 				}
 				i++;
 			}
