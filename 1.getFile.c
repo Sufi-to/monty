@@ -52,7 +52,7 @@ void exec_instr(stack_t **stack, FILE *montyF, instruction_t insts[])
 					insts[i].f(stack, line_number);
 					break;
 				}
-				else if (strcmp("#", opcode) == 0)
+				else if (strcmp(opcode, "#") == 0)
 				{
 					insts[6].f(stack, line_number);
 				}
