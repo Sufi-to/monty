@@ -30,10 +30,11 @@ void printchrTop(stack_t **stack, unsigned int line_number)
 */
 void printstrTop(stack_t **stack, unsigned int line_number)
 {
+	(void)line_number;
+
 	if (*stack == NULL)
 	{
-		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
-		exit(EXIT_FAILURE);
+		printf("\n");
 	}
 
 	while (*stack != NULL && (*stack)->n != 0 && (*stack)->n > 32
