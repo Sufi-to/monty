@@ -41,6 +41,11 @@ void exec_instr(stack_t **stack, FILE *montyF, instruction_t insts[])
 	while (fgets(read_montyF, sizeof(read_montyF), montyF) != NULL)
 	{
 		line_number++;
+		if (read_montyF[0] == '#')
+		{
+			continue;
+		}
+
 		opcode = strtok(read_montyF, " \n");
 		if (opcode != NULL)
 		{
@@ -51,10 +56,6 @@ void exec_instr(stack_t **stack, FILE *montyF, instruction_t insts[])
 				{
 					insts[i].f(stack, line_number);
 					break;
-				}
-				else if (strcmp(opcode, "#") == 0)
-				{
-					insts[6].f(stack, line_number);
 				}
 				i++;
 			}
