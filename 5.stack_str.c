@@ -35,6 +35,7 @@ void printstrTop(stack_t **stack, unsigned int line_number)
 	if (*stack == NULL)
 	{
 		printf("\n");
+		return;
 	}
 
 	while (*stack != NULL && (*stack)->n != 0 && (*stack)->n > 32
