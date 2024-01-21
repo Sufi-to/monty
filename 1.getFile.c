@@ -41,12 +41,12 @@ void exec_instr(stack_t **stack, FILE *montyF, instruction_t insts[])
 	while (fgets(read_montyF, sizeof(read_montyF), montyF) != NULL)
 	{
 		line_number++;
-		if (read_montyF[0] == '#')
+
+		opcode = strtok(read_montyF, " \n");
+		if (opcode == '#')
 		{
 			continue;
 		}
-
-		opcode = strtok(read_montyF, " \n");
 		if (opcode != NULL)
 		{
 			i = 0;
