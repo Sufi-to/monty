@@ -43,7 +43,7 @@ void exec_instr(stack_t **stack, FILE *montyF, instruction_t insts[])
 		line_number++;
 
 		opcode = strtok(read_montyF, " \n");
-		if (opcode == '#')
+		if (opcode[0] == '#')
 		{
 			continue;
 		}
