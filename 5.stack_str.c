@@ -36,7 +36,8 @@ void printstrTop(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	while(*stack != NULL && (*stack)->n != 0 && (*stack)->n > 32 && (*stack)->n < 127)
+	while (*stack != NULL && (*stack)->n != 0 && (*stack)->n > 32
+	&& (*stack)->n < 127)
 	{
 		printf("%c", (*stack)->n);
 		*stack = (*stack)->next;
