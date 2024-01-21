@@ -25,6 +25,7 @@ int main(int ac, char *av[])
 		{"div", divTopTwo},
 		{"mod", modTopTwo},
 		{"pchar", printchrTop},
+		{"pstr", printstrTop},
 		{NULL, NULL}
 	};
 	stack = NULL;

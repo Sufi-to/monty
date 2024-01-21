@@ -1,2 +1,3 @@
-push 4
-pchar
+push 3
+push 34
+pall

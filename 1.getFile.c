@@ -44,9 +44,7 @@ void exec_instr(stack_t **stack, FILE *montyF, instruction_t insts[])
 
 		opcode = strtok(read_montyF, " \n");
 		if (opcode[0] == '#')
-		{
 			continue;
-		}
 		if (opcode != NULL)
 		{
 			i = 0;
